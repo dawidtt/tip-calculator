@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <header><img src="./images/logo.svg" alt="" /></header>
+    <div id="main-container">
+      <div id="calculation">
+        <form action="">
+          <div id="bill-container">
+            <label for="bill" class="lbl-size">Bill</label><br /><input
+              id="bill"
+              type="text"
+              placeholder="0"
+            />
+          </div>
+          <div id="select-container">
+            <div id="grid-1">
+              <label id="select-tip-label" for="select" class="lbl-size">
+                Select Tip %</label
+              ><br />
+            </div>
+            <div id="grid-2" class="grid-container">
+              <input type="radio" name="select" id="5%" value="5%" />
+              <label for="5%">5%</label>
+            </div>
+            <div id="grid-3" class="grid-container">
+              <input type="radio" name="select" id="10%" value="10%" />
+              <label for="10%">10%</label>
+            </div>
+            <div id="grid-4" class="grid-container">
+              <input type="radio" name="select" id="15%" value="15%" />
+              <label for="15%">15%</label>
+            </div>
+            <div id="grid-5" class="grid-container">
+              <input type="radio" name="select" id="25%" value="25%" />
+              <label for="25%">25%</label>
+            </div>
+            <div id="grid-6" class="grid-container">
+              <input type="radio" name="select" id="50%" value="50%" />
+              <label for="50%">50%</label>
+            </div>
+            <div onclick="clearSelect()" id="grid-7" class="grid-container">
+              <input
+                id="custom"
+                type="text"
+                name="custom"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div id="people-container">
+            <div id="people-flex">
+              <label for="people" class="lbl-size">Number of People</label
+              ><br />
+              <p id="err">Can't be zero</p>
+            </div>
+            <input type="text" id="people" placeholder="0" />
+          </div>
+        </form>
+      </div>
+      <div id="results">
+        <div id="top-results">
+          <div id="tip-amount">
+            <div class="left-sides-results">
+              <p id="tip-amount">Tip Amount</p>
+              <p class="person">/ person</p>
+            </div>
+            <div class="right-sides-reset">
+              <p id="tip-amount-result" class="result">$0</p>
+            </div>
+          </div>
+          <div id="total">
+            <div class="left-sides-results">
+              <p id="total-text">Total</p>
+              <p class="person">/ person</p>
+            </div>
+
+            <div class="right-sides-reset">
+              <p id="total-result" class="result">$0</p>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="reset()" id="reset">Reset</button>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
